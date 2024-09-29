@@ -1,0 +1,70 @@
+* {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+section {
+    border: 2px solid black;
+    width: 300px;
+}
+
+section div {
+    border-top: 2px solid black;
+}
+
+span {
+    font-size: xx-large;
+    padding: 0 50px 0 50px;
+}
+
+.drop-task {
+    height: 100px;
+    padding: 0.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.drag-task {
+    height: 55px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.drag-task p {
+    display: inline-block;
+    font-size: 16px;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#task-done {
+    width: 100px;
+    height: 120px;
+    margin: 20px 20px;
+    padding: 10px;
+    overflow-y: auto;
+}

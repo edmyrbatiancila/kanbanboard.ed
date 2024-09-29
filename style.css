@@ -1,3 +1,12 @@
+/* * {
+    outline: 1px dotted red;
+} */
+
+#drag-section, #drop-section, #resizable-section {
+    padding-bottom: 10px;
+    border-bottom: 1px dotted blue;
+}
+
 #drag-around {
     width: 150px;
     height: 150px;
@@ -8,11 +17,30 @@ span {
     font-weight: bold;
 }
 
+#drop-section {
+    display: flex;
+    flex-direction: column;
+}
+
 #drag-target { 
-    width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; 
+    width: 100px; 
+    height: 100px; 
+    padding: 0.5em; 
 }
 
 #droppable { 
-    width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; 
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
 }
 
+#resizable { 
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+}
+
+#resizable h3 { 
+    text-align: center; 
+    margin: 0; 
+}

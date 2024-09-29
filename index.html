@@ -3,40 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="kanban-style.css">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/themes/smoothness/jquery-ui.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                // Below is about drag-section
-                $("#drag-around").draggable();
-
-                // Below is about drop-section
-                $("#drag-target").draggable({
-                    revert: "invalid", // Makes the item return if not dropped
-                    start: function() {
-                        $(this).css("background-color", ""); // Reset background when starting drag
-                    },
-                    drag: function(event, ui) {
-                        $("#droppable").css("background-color", "")
-                        .find("p")
-                        .html("Drop here"); // Change back to original
-                    }
-                })
-
-                $("#droppable").droppable({
-                    drop: function(event, ui) {
-                        $(this).css("background-color", "yellow") // Change to yellow when an item is dropped
-                            .find("p")
-                            .html("Dropped!");
-                        $("#drag-target").css("background-color", ""); // Reset background
-                        $("#drag-target").draggable("option", "revert", false);
-                    }
-                    
-                });
-            });
-        </script>
+        <script type="text/javascript" src="kanban-script.js"></script>
         <title>Kanban Board</title>
     </head>
     <body>
@@ -44,22 +15,114 @@
             <h1>Kanban Board</h1>
         </header>
         <main>
-            <section id="drag-section">
-                <h2>Example of Draggable</h2>
-                <div id="drag-around" class="ui-widget-content">
-                    <p><span>Drag me around.</span> This is example of draggable() function in JQueryUI</p>
+            <section id="todo">
+                <span>Todo</span>
+                <div class="drop-task drop_todo">
+                    
+                </div>
+                <div class="drop-task drop_todo">
+                    
+                </div>
+                <div class="drop-task drop_todo">
+                    
+                </div>
+                <div class="drop-task drop_todo">
+                    
                 </div>
             </section>
-            <hr>
-            <section id="drop-section">
-                <h2>Example of Droppable</h2>
-                <div id="drag-target" class="ui-widget-content">
-                    <p>Drag me to my target</p>
+            <section id="in-progress">
+                <span>In Progress</span>
+                <div class="drop-task">
+                    
                 </div>
-                <div id="droppable" class="ui-widget-header">
-                    <p>Drop here</p>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+            </section>
+            <section id="for-approval">
+                <span>For Approval</span>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+            </section>
+            <section id="testing">
+                <span>Testing</span>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+                <div class="drop-task">
+                    
+                </div>
+            </section>
+            <section id="done">
+                <span id="done-task">Done</span>
+                <div class="drop-task done_task">
+                    
+                </div>
+                <div class="drop-task done_task">
+                    
+                </div>
+                <div class="drop-task done_task">
+                    
+                </div>
+                <div class="drop-task done_task">
+                    
                 </div>
             </section>
         </main>
+        <nav>
+            <span>Task List:</span>
+            <div title="planning" class="drag-task">
+                <p>Planning</p>
+            </div>
+            <div class="drag-task">
+                <p>Coding</p>
+            </div>
+            <div class="drag-task">
+                <p>Front-End</p>
+            </div>
+            <div class="drag-task">
+                <p>Back-End</p>
+            </div>
+            <div class="drag-task">
+                <p>Designing</p>
+            </div>
+            <div class="drag-task">
+                <p>Implementation</p>
+            </div>
+            <div class="drag-task">
+                <p>Documentation</p>
+            </div>
+            <div class="drag-task">
+                <p>Task Finalization</p>
+            </div>
+            <div class="drag-task">
+                <p>Deployment stage</p>
+            </div>
+            <div class="drag-task">
+                <p>Market Review</p>
+            </div>
+        </nav>
     </body>
 </html>
