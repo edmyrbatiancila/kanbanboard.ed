@@ -23,7 +23,7 @@ section div {
 }
 
 span {
-    font-size: xx-large;
+    font-size: x-large;
     padding: 0 50px 0 50px;
 }
 
@@ -45,12 +45,13 @@ nav {
     border: 2px solid black;
     border-radius: 50%;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px;
 }
 
 .drag-task p {
     display: inline-block;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 aside {
